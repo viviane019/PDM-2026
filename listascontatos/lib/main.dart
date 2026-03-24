@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: ListaContatos(),
-  ));
+  runApp(
+    const MaterialApp(debugShowCheckedModeBanner: false, home: ListaContatos()),
+  );
 }
 
 // Modelo de contato com cor própria
@@ -117,10 +116,7 @@ class DetalheContato extends StatelessWidget {
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            Text(
-              contato.telefone,
-              style: const TextStyle(fontSize: 18),
-            ),
+            Text(contato.telefone, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 32),
             ElevatedButton.icon(
               onPressed: () => Navigator.pop(context),
@@ -172,17 +168,18 @@ class LigarContato extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.phone, size: 80, color: contato.cor), // 🎨 cor do contato
+            Icon(
+              Icons.phone,
+              size: 80,
+              color: contato.cor,
+            ), // 🎨 cor do contato
             const SizedBox(height: 16),
             Text(
               contato.nome,
               style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            Text(
-              contato.telefone,
-              style: const TextStyle(fontSize: 18),
-            ),
+            Text(contato.telefone, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 32),
             Text(
               'Ligando...',
